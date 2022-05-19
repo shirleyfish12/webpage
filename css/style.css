@@ -1,0 +1,380 @@
+h1,h2,h3,h4,h5,h6 {
+
+    font-family: 'Carter One', cursive;
+    
+}
+
+p,a,input,label,textarea,span,ul,li {
+
+    font-family: 'Lato', sans-serif;
+}
+
+/* background format setting */
+#intro .jumbotron {
+    background-image: url("../img/b1.jpg");
+    background-size: 100%;
+    padding: 0%;
+    height: 70vh;  
+    
+}
+
+/*　font color set by me */
+.blue {
+  color: #144473;
+}
+
+.red {
+  color: #9b4f4f;
+}
+
+
+#intro .btn {
+
+    background: #1a9e37;
+    color:azure;
+    padding: 9px 26px;
+    border-radius: 20px;
+}
+
+#intro .container {
+    position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+#home {
+     border-radius: 30%;
+     width:45px;
+} 
+
+header .nav-item {
+
+  margin: 0 70px;
+}
+
+ 
+/* id = card */
+#card {
+ 
+  flex: 1 1 auto;
+  padding: 1.25rem;
+ 
+}
+
+
+/* button style, Copy from other  https://cssbuttons.app/buttons/23 view my code btn*/
+
+.bn632-hover {
+    width: 160px;
+    font-size: 16px;
+    font-weight: 300;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+   /* margin: 20px;
+    height: 55px; */
+    text-align:center;
+    border: none;
+    background-size: 300% 100%;
+    border-radius: 20px;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+    padding: 9px 26px;
+  
+  }
+  
+  .bn632-hover:hover {
+    background-position: 100% 0;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+  }
+  
+  .bn632-hover:focus {
+    outline: none;
+  }
+  
+  .bn632-hover.bn23 {
+    background-image: linear-gradient(
+      to right,
+      #1a9e37,
+      #fcee21,
+      rgb(243, 163, 71),
+      #faf764
+    );
+    box-shadow: 0 4px 15px 0 rgba(83, 176, 57, 0.75);
+  }
+
+  
+/* know more about me, card css https://www.w3schools.com/howto/howto_css_cards.asp    line 219-246  */
+
+  .card {
+    /* Add shadows to create the "card" effect */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    background: #faffca;
+  }
+  
+  /* On mouse-over, add a deeper shadow */
+  .card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
+  
+  /* Add some padding inside the card container */
+  .container {
+    padding: 2px 16px;
+  }
+
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    border-radius: 15px; /* 5px rounded corners */
+  }
+  
+  /* Add rounded corners to the top left and the top right corner of the image */
+  img {
+   
+      width:60px;
+ 
+  }
+
+/* card font size */
+
+#main .font{
+
+  font-size: 120%;
+  color: #144473;
+}
+
+  /*--------------------------------------------------------------------------------------------------------------*/
+  /* jumbotron colour*/
+  .bg-warning {
+  
+    padding: 30px;
+    background-image: linear-gradient(
+      to right,
+      #7ef397,
+      #fcee21,
+      rgb(243, 163, 71),
+      #faf764
+    );
+    box-shadow: 0 4px 15px 0 rgba(83, 176, 57, 0.75);
+}
+
+
+.web {
+  
+  padding: 30px;
+  background-color: #ffae9e;
+  
+}
+
+/*--------------------------------------------------------------------------------------------------------------*/
+  /* header navbar colour*/
+.navbar-expand-lg {
+    background: rgb(255, 255, 255);
+    text-align: center;
+  
+}
+
+/*--------------------------------------------------------------------------------------------------------------*/
+  /* header navbar bar copy https://codepen.io/scottyzen/pen/JzbBpo*/
+
+
+/* home img size */
+
+  #home {
+    border-radius: 30%;
+    width:45px;
+} 
+
+
+  .copy ul{
+	display: flex;
+	width: 100%;
+	margin: auto;
+	justify-content: space-between;
+	text-align: center;
+  
+  
+}
+
+.copy li {
+	padding: 20px;
+  text-transform: uppercase;
+  cursor: pointer;
+  color: #9b4f4f;
+	min-width: 80px;
+	margin: auto;
+  list-style-type: none
+  
+}
+
+.link {
+
+  text-decoration: none;
+  padding: 1rem 2rem 1.15rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  color: #000000;;
+	min-width: 80px;
+	margin: auto;
+  list-style-type: none
+
+
+}
+
+.copy li:hover {
+  background-image: url("../img/button.png");
+  background-size: 100% 100%;
+  color: #27262c;
+  animation: spring 300ms ease-out;
+  text-shadow: 0 -1px 0 #ef816c;
+	font-weight: bold;
+  
+}
+.copy li:active {
+  
+  transform: translateY(4px);
+  
+}
+
+@keyframes spring {
+  15% {
+    -webkit-transform-origin: center center;
+    -webkit-transform: scale(1.2, 1.1);
+  }
+  40% {
+    -webkit-transform-origin: center center;
+    -webkit-transform: scale(0.95, 0.95);
+  }
+  75% {
+    -webkit-transform-origin: center center;
+    -webkit-transform: scale(1.05, 1);
+  }
+  100% {
+    -webkit-transform-origin: center center;
+    -webkit-transform: scale(1, 1);
+  }
+}
+
+/*--------------------------------------------------------------------------------------------*/
+
+
+/*footer 
+  https://codepen.io/slstudios/pen/mJqjeP 
+  
+  icon: https://mdbootstrap.com/docs/standard/extended/social-media/
+
+  line 223 - 318
+  */
+
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,500,300,700);
+
+
+.footer-distributed {
+  background-color: #ffffff;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+  box-sizing: border-box;
+  width: 100%;
+  text-align: left;
+  font: normal 16px sans-serif;
+  padding: 45px 50px;
+}
+
+.footer-distributed .footer-left p {
+  color: #8f9296;
+  font-size: 14px;
+  margin: 0;
+}
+/* Footer links */
+
+.footer-distributed p.footer-links {
+  font-size: 18px;
+  font-weight: bold;
+  color: #000000;
+  margin: 0 0 10px;
+  padding: 0;
+  transition: ease .25s;
+}
+
+.footer-distributed p.footer-links a {
+  display: inline-block;
+  line-height: 1.8;
+  text-decoration: none;
+  color: inherit;
+  transition: ease .25s;
+}
+
+.footer-distributed .footer-links a:before {
+  content: "·";
+  font-size: 20px;
+  left: 0;
+  color: #fff;
+  display: inline-block;
+  padding-right: 5px;
+}
+
+.footer-distributed .footer-links .link-1:before {
+  content: none;
+}
+
+.footer-distributed .footer-right {
+  float: right;
+  margin-top: 6px;
+  max-width: 180px;
+}
+
+.footer-distributed .footer-right a {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  background-color: #777a7c;
+  border-radius: 2px;
+  font-size: 20px;
+  color: #ffffff;
+  text-align: center;
+  line-height: 35px;
+  margin-left: 3px;
+  transition:all .25s;
+}
+
+.footer-distributed .footer-right a:hover{transform:scale(1.1); -webkit-transform:scale(1.1);}
+
+.footer-distributed p.footer-links a:hover{text-decoration:underline;}
+
+/* Media Queries */
+
+@media (max-width: 600px) {
+  .footer-distributed .footer-left, .footer-distributed .footer-right {
+    text-align: center;
+  }
+  .footer-distributed .footer-right {
+    float: none;
+    margin: 0 auto 20px;
+  }
+  .footer-distributed .footer-left p.footer-links {
+    line-height: 1.8;
+  }
+}
+/*  contact me, css, card  */
+
+#contact .card {
+  box-shadow: 0 4px 8px 0 rgb(205 159 159 / 20%);
+  transition: 0.3s;
+  border-radius: 15px;
+  padding: 30px;
+  background: #d7d7d6;
+}
+
+/*  contact me , css, btn  */
+#send .btn {
+
+background-color: #555555; 
+color: #fbfcfd;
+padding: 10px;
+border-radius: 25px;
+}
+
