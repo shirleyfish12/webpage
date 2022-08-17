@@ -12,7 +12,7 @@ public class password {
        // System.out.println(random_int); //print out the number
 
         Scanner guessNum = new Scanner(System.in);
-        for (int i=5; i>0; i--) {
+        for (int i=10; i>0; i--) {
             System.out.println("Make your guess between " + min + " to " + max);
 
           if(i==1){
