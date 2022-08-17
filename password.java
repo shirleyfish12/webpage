@@ -9,7 +9,7 @@ public class password {
 
         //Generate random int value from 0 to 100
         final int random_int = (int) Math.floor(Math.random() * (max - min + 1) + min);
-        System.out.println(random_int); //print out the number
+       // System.out.println(random_int); //print out the number
 
         Scanner guessNum = new Scanner(System.in);
         for (int i=5; i>0; i--) {
