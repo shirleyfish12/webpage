@@ -1,0 +1,249 @@
+using System.Globalization;
+
+public Dictionary<string, object> Generate(AirlineTemplateBase vm)
+{
+    Dictionary<string, object> d = new Dictionary<string, object>();
+    d["Remark"] = vm.Remark;
+    d["CreateBy"] = vm.CreateBy;
+    d["Airline"] = vm.Airline;
+    d["SupplierCode"] = vm.SupplierCode;
+    d["SupplierID"] = vm.SupplierID;
+    d["SupplierName"] = vm.SupplierName;
+    d["SupplierOrderContactEmails"] = vm.SupplierOrderContactEmails;
+    List<Dictionary<string, object>> DepartureGroup = new List<Dictionary<string, object>>();
+    foreach (var i in vm.DepartureGroup)
+    {
+        var j = new Dictionary<string, object>();
+        j["Item1"] = i.Item1;
+        j["Item2"] = i.Item2;
+        DepartureGroup.Add(j);
+    }
+    d["DepartureGroup"] = DepartureGroup;
+    List<Dictionary<string, object>> NameList = new List<Dictionary<string, object>>();
+    foreach (var i in vm.NameList)
+    {
+        var j = new Dictionary<string, object>();
+        j["NameListID"] = i.NameListID;
+        j["GroupID"] = i.GroupID;
+        j["PassengerID"] = i.PassengerID;
+        j["OrderID"] = i.OrderID;
+        j["OrderNo"] = i.OrderNo;
+        j["SurnName"] = i.SurnName;
+        j["GivenName"] = i.GivenName;
+        j["IsFake"] = i.IsFake;
+        j["GenderName"] = i.GenderName;
+        j["EmployeeID"] = i.EmployeeID;
+        j["PassengerRemark"] = i.PassengerRemark;
+        j["TripRemark"] = i.TripRemark;
+        j["PaxGroupNo"] = i.PaxGroupNo;
+        j["BackDate"] = i.BackDate;
+        j["DepartureDate"] = i.DepartureDate;
+        NameList.Add(j);
+    }
+    d["NameList"] = NameList;
+    List<Dictionary<string, object>> Passenger = new List<Dictionary<string, object>>();
+    foreach (var i in vm.Passenger)
+    {
+        var j = new Dictionary<string, object>();
+        j["PassengerID"] = i.PassengerID;
+        j["PassengerType"] = i.PassengerType;
+        j["PassengerNo"] = i.PassengerNo;
+        j["RoomOccupationType"] = i.RoomOccupationType;
+        j["OrderID"] = i.OrderID;
+        j["OrderNo"] = i.OrderNo;
+        j["SurnName"] = i.SurnName;
+        j["GivenName"] = i.GivenName;
+        j["Xing"] = i.Xing;
+        j["Ming"] = i.Ming;
+        j["TelArea"] = i.TelArea;
+        j["TelNo"] = i.TelNo;
+        j["Gender"] = i.Gender;
+        j["GenderName"] = i.GenderName;
+        j["Birthday"] = i.Birthday;
+        j["PriceTitle"] = i.PriceTitle;
+        j["RoomNumber"] = i.RoomNumber;
+        j["IndexInRoom"] = i.IndexInRoom;
+        j["Citizenship"] = i.Citizenship;
+        j["Nationality"] = i.Nationality;
+        j["BedType"] = i.BedType;
+        j["FirstTravelDocCode"] = i.FirstTravelDocCode;
+        j["FirstTravelDocNumber"] = i.FirstTravelDocNumber;
+        j["FirstTravelDocIssuePlace"] = i.FirstTravelDocIssuePlace;
+        j["FirstTravelDocExpiredDate"] = i.FirstTravelDocExpiredDate;
+        j["FirstTravelDocIssueDate"] = i.FirstTravelDocIssueDate;
+        j["SecondTravelDocCode"] = i.SecondTravelDocCode;
+        j["SecondTravelDocNumber"] = i.SecondTravelDocNumber;
+        j["SecondTravelDocIssuePlace"] = i.SecondTravelDocIssuePlace;
+        j["SecondTravelDocExpiredDate"] = i.SecondTravelDocExpiredDate;
+        j["SecondTravelDocIssueDate"] = i.SecondTravelDocIssueDate;
+        j["ThirdTravelDocCode"] = i.ThirdTravelDocCode;
+        j["ThirdTravelDocNumber"] = i.ThirdTravelDocNumber;
+        j["ThirdTravelDocIssuePlace"] = i.ThirdTravelDocIssuePlace;
+        j["ThirdTravelDocExpiredDate"] = i.ThirdTravelDocExpiredDate;
+        j["ThirdTravelDocIssueDate"] = i.ThirdTravelDocIssueDate;
+        Passenger.Add(j);
+    }
+    d["Passenger"] = Passenger;
+    List<Dictionary<string, object>> Employee = new List<Dictionary<string, object>>();
+    foreach (var i in vm.Employee)
+    {
+        var j = new Dictionary<string, object>();
+        j["EmployeeID"] = i.EmployeeID;
+        j["Title"] = i.Title;
+        j["Gender"] = i.Gender;
+        j["SurnNameEN"] = i.SurnNameEN;
+        j["FirstName"] = i.FirstName;
+        j["Alias"] = i.Alias;
+        j["FullNamePP"] = i.FullNamePP;
+        j["FullNameCN"] = i.FullNameCN;
+        j["HKIDNO"] = i.HKIDNO;
+        j["Company"] = i.Company;
+        j["DateofBirth"] = i.DateofBirth;
+        j["Nationality"] = i.Nationality;
+        j["PriPassportNO"] = i.PriPassportNO;
+        j["PriPassportExpiryDate"] = i.PriPassportExpiryDate;
+        j["PriIssuedPlace"] = i.PriIssuedPlace;
+        j["SecPassportNO"] = i.SecPassportNO;
+        j["SecPassportExpiryDate"] = i.SecPassportExpiryDate;
+        j["SecIssuedPlace"] = i.SecIssuedPlace;
+        j["CepNO"] = i.CepNO;
+        j["CepExpiryDate"] = i.CepExpiryDate;
+        j["OutPermitNO"] = i.OutPermitNO;
+        j["OutPermitExpiryDate"] = i.OutPermitExpiryDate;
+        j["InPermitNO"] = i.InPermitNO;
+        j["InPermitExpiryDate"] = i.InPermitExpiryDate;
+        j["IARegNO"] = i.IARegNO;
+        j["IARegExpiryDate"] = i.IARegExpiryDate;
+        j["ADDRESS"] = i.ADDRESS;
+        j["District"] = i.District;
+        j["Mobile1"] = i.Mobile1;
+        j["Mobile2"] = i.Mobile2;
+        j["HomeTel"] = i.HomeTel;
+        j["EmergencyContact"] = i.EmergencyContact;
+        j["ContactNO"] = i.ContactNO;
+        j["EmailAddress"] = i.EmailAddress;
+        Employee.Add(j);
+    }
+    d["Employee"] = Employee;
+    List<Dictionary<string, object>> Rloc = new List<Dictionary<string, object>>();
+    foreach (var i in vm.Rloc)
+    {
+        var j = new Dictionary<string, object>();
+        j["PRID"] = i.PRID;
+        j["NameListID"] = i.NameListID;
+        j["PassengerID"] = i.PassengerID;
+        j["RLOCType"] = i.RLOCType;
+        j["RLOC"] = i.RLOC;
+        Rloc.Add(j);
+    }
+    d["Rloc"] = Rloc;
+    List<Dictionary<string, object>> Routing = new List<Dictionary<string, object>>();
+    foreach (var i in vm.Routing)
+    {
+        var j = new Dictionary<string, object>();
+        j["AirlineCode"] = i.AirlineCode;
+        j["AirlineName"] = i.AirlineName;
+        j["ArrivalDate"] = i.ArrivalDate;
+        j["DepartureDate"] = i.DepartureDate;
+        j["Duration"] = i.Duration;
+        j["FlightNumber"] = i.FlightNumber;
+        j["FlightRouteID"] = i.FlightRouteID;
+        j["FromAirportCode"] = i.FromAirportCode;
+        j["FromAirportName"] = i.FromAirportName;
+        j["ToAirportCode"] = i.ToAirportCode;
+        j["ToAirportName"] = i.ToAirportName;
+        Routing.Add(j);
+    }
+    d["Routing"] = Routing;
+
+    // Excel模板字段
+
+    var britishCulture = CultureInfo.GetCultureInfo("en-GB");
+
+    var no = 1;
+    var emp_Name = "";
+    List<Dictionary<string, object>> LHPassenger = new List<Dictionary<string, object>>();
+    var emp = new Dictionary<string, object>();
+    
+    foreach (var i in vm.NameList)
+    {
+        var j = new Dictionary<string, object>();
+
+        if (i.PassengerID.HasValue)
+        {
+            j["No"] = no;
+            no++;
+            var passenger = vm.Passenger.First(p => p.PassengerID == i.PassengerID);
+
+            int mm;
+            int ml;
+            mm = i.GivenName.IndexOf(" ");
+            ml = i.GivenName.Length;
+            if (mm < 0)
+            {
+                j["FirstName"] = string.IsNullOrWhiteSpace(i.GivenName) ? "" : i.GivenName.ToUpper();
+                j["MiddleName"] = "";
+            }
+            else
+            {
+                string temp_First = i.GivenName.Substring(0, mm);
+                string temp_Middle = i.GivenName.Substring(mm, ml - mm);
+                j["FirstName"] = temp_First.ToUpper();
+                j["MiddleName"] = string.IsNullOrWhiteSpace(temp_Middle) ? "" : temp_Middle.ToUpper();
+            }
+            j["LastName"] = string.IsNullOrWhiteSpace(i.SurnName) ? "" : i.SurnName.ToUpper();
+
+            if (passenger.PassengerType == 1)
+            {
+                j["PassengerType"] = "ADT";
+            }
+            else if (passenger.PassengerType == 0)
+            {
+                j["PassengerType"] = "INF";
+            }
+            else
+            {
+                j["PassengerType"] = "CHD";
+            }
+
+            j["Gender"] = passenger.Gender ? "M" : "F";
+            j["Title"] = passenger.GenderName;
+            j["DateOfBirth"] = passenger.Birthday.HasValue ? passenger.Birthday.Value.ToString("dd-MMM-yy", britishCulture).ToUpper() : string.Empty;
+            LHPassenger.Add(j);
+        }
+        else if (i.EmployeeID.HasValue)
+        {
+            emp["No"] = no;
+            var employee = vm.Employee.First(e => e.EmployeeID == i.EmployeeID);
+
+            emp["Gender"] = employee.Gender;
+            emp["Nationality"] = employee.Nationality;
+            emp["LastName"] = employee.SurnNameEN;
+            emp["FirstName"] = employee.FirstName;
+            emp["Name"] = employee.SurnNameEN + "/" + employee.FullNamePP.Substring(employee.SurnNameEN.Length, (employee.FullNamePP.Length - employee.SurnNameEN.Length)).Replace(" ", "");
+            emp_Name = employee.FullNamePP;
+            emp["PassengerType"] = "ADT";
+            emp["PassportNO"] = employee.PriPassportNO;
+            emp["IssueCny"] = employee.PriIssuedPlace;
+
+            emp["PassportExpiredDate"] =
+DateTime.Parse(employee.PriPassportExpiryDate, britishCulture).ToString("ddMMMyy", britishCulture).ToUpper();
+            emp["Title"] = employee.Title;
+            if (string.IsNullOrEmpty(employee.DateofBirth) == false)
+            {
+                emp["DateOfBirth"] = DateTime.Parse(employee.DateofBirth, britishCulture).ToString("dd-MMM-yy", britishCulture).ToUpper();
+            }
+        }
+
+    }
+    if (emp_Name != "")
+    {
+        emp["No"] = no;
+        LHPassenger.Add(emp);
+    }
+    LHPassenger.Reverse();
+
+
+    d["LHPassenger"] = LHPassenger;
+    return d;
+}
